@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holly Ambler — UX Researcher</title>
+<meta name="description" content="Holly Ambler is a senior UX researcher specializing in enterprise software, complex admin experiences, and turning customer signal into product direction.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8;
+    --bg-soft:#f3f0ea;
+    --ink:#1c1b19;
+    --ink-soft:#4a4742;
+    --muted:#77716a;
+    --line:#e5e0d7;
+    --accent:#9c4a35;
+    --accent-soft:#c98a6f;
+    --max:1120px;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+
+  /* Nav */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,250,248,.82);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:.2px}
+  .brand span{color:var(--accent)}
+  .nav ul{display:flex;gap:30px;list-style:none;font-size:14px;letter-spacing:.3px}
+  .nav ul a{color:var(--ink-soft);transition:color .2s}
+  .nav ul a:hover{color:var(--accent)}
+  .nav-cta{border:1px solid var(--ink);padding:9px 18px;border-radius:100px;font-size:14px;transition:all .2s}
+  .nav-cta:hover{background:var(--ink);color:var(--bg)}
+  @media(max-width:720px){.nav ul{display:none}}
+
+  /* Hero */
+  .hero{padding:88px 0 72px}
+  .eyebrow{
+    font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:26px;
+  }
+  .hero h1{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(38px,6.2vw,68px);line-height:1.06;
+    letter-spacing:-.5px;max-width:16ch;
+  }
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero .lede{
+    margin-top:28px;max-width:56ch;font-size:20px;color:var(--ink-soft);
+  }
+  .hero-meta{
+    margin-top:40px;display:flex;flex-wrap:wrap;gap:12px 28px;
+    font-size:14px;color:var(--muted);
+  }
+  .hero-meta b{color:var(--ink);font-weight:600}
+
+  /* Section shells */
+  section{padding:72px 0}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:40px}
+  .sec-num{font-family:var(--serif);color:var(--accent-soft);font-size:15px;font-weight:600}
+  .sec-title{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.6vw,36px);letter-spacing:-.3px}
+
+  /* About */
+  .about{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:start}
+  .about-grid p{margin-bottom:18px;color:var(--ink-soft)}
+  .about-grid p strong{color:var(--ink);font-weight:600}
+  .about-side{border-left:2px solid var(--accent);padding-left:24px}
+  .about-side h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-weight:600}
+  .about-side ul{list-style:none;font-size:15px}
+  .about-side li{padding:7px 0;border-bottom:1px dotted var(--line);color:var(--ink-soft)}
+  .about-side li:last-child{border-bottom:0}
+  .about-side .block+ .block{margin-top:32px}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:36px}}
+
+  /* Projects */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+  .card{
+    display:flex;flex-direction:column;
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s;
+  }
+  .card.live{cursor:pointer}
+  .card.live:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(28,27,25,.35);border-color:var(--accent-soft)}
+  .card-visual{
+    height:172px;position:relative;overflow:hidden;
+    background:linear-gradient(135deg,#2b3a3a 0%,#3f5a58 55%,#9c4a35 140%);
+  }
+  .card-visual .mockrows{position:absolute;inset:26px 26px auto 26px;display:grid;gap:9px}
+  .mockrows .bar{height:12px;border-radius:4px;background:rgba(255,255,255,.16)}
+  .mockrows .bar.chart{height:44px;background:rgba(255,255,255,.10);display:flex;align-items:flex-end;gap:6px;padding:6px}
+  .mockrows .bar.chart i{flex:1;background:rgba(255,255,255,.42);border-radius:2px}
+  .card-visual.ph{background:repeating-linear-gradient(45deg,#efe9df,#efe9df 12px,#f5f0e8 12px,#f5f0e8 24px)}
+  .card-tag{
+    position:absolute;top:14px;left:14px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    background:rgba(255,255,255,.92);color:var(--ink);padding:5px 11px;border-radius:100px;font-weight:600;
+  }
+  .card-body{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column}
+  .card-kicker{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px}
+  .card h3{font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.2;margin-bottom:12px}
+  .card p{font-size:15px;color:var(--ink-soft);margin-bottom:20px}
+  .card .meta-row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted)}
+  .card .go{color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:6px}
+  .card.ph .card-body{opacity:.72}
+  .ph-note{font-size:12px;color:var(--muted);font-style:italic}
+
+  /* Contact */
+  .contact{background:var(--ink);color:#f3efe8;text-align:center}
+  .contact .sec-title{color:#fff}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.6vw,48px);letter-spacing:-.4px;max-width:18ch;margin:0 auto 22px}
+  .contact h2 em{font-style:italic;color:var(--accent-soft)}
+  .contact p{color:#bcb5ab;max-width:48ch;margin:0 auto 34px}
+  .contact-mail{
+    display:inline-block;font-family:var(--serif);font-size:24px;color:#fff;
+    border-bottom:2px solid var(--accent);padding-bottom:4px;transition:color .2s
+  }
+  .contact-mail:hover{color:var(--accent-soft)}
+  .contact-links{margin-top:30px;display:flex;gap:26px;justify-content:center;font-size:14px}
+  .contact-links a{color:#bcb5ab;border-bottom:1px solid transparent;padding-bottom:2px;transition:.2s}
+  .contact-links a:hover{color:#fff;border-color:var(--accent)}
+
+  footer{padding:34px 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  .placeholder-flag{background:rgba(156,74,53,.10);color:var(--accent);border:1px dashed var(--accent-soft);font-size:12px;padding:3px 9px;border-radius:6px;font-weight:600}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Holly Ambler<span>.</span></a>
+    <nav>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Senior UX Researcher</div>
+    <h1>I turn messy customer signal into <em>product direction</em> teams can act on.</h1>
+    <p class="lede">Nine years researching enterprise and security software at Microsoft — the kind with high stakes, expert users, and no room for guesswork. I run mixed-methods studies that reframe what teams build, not just how it looks.</p>
+    <div class="hero-meta">
+      <span><b>9 years</b> in enterprise UX research</span>
+      <span><b>Mixed methods</b> — qual & quant</span>
+      <span><b>Focus</b> — admin, security & data-dense products</span>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">Selected work</h2>
+    </div>
+    <div class="cards">
+
+      <!-- LIVE PROJECT -->
+      <a class="card live" href="intune-homepage-redesign.html">
+        <div class="card-visual">
+          <span class="card-tag">Case study</span>
+          <div class="mockrows">
+            <div class="bar" style="width:60%"></div>
+            <div class="bar chart"><i style="height:60%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:75%"></i><i style="height:55%"></i></div>
+            <div class="bar" style="width:40%"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-kicker">Microsoft Intune · 2024</div>
+          <h3>Redesigning the Intune admin homepage</h3>
+          <p>Four rounds of design review with enterprise admins reframed a homepage redesign into a question of trust, monitoring, and customizable data — changing what the team chose to build.</p>
+          <div class="meta-row">
+            <span>Generative & evaluative · Design reviews</span>
+            <span class="go">Read case study →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- PLACEHOLDER -->
+      <div class="card ph">
+        <div class="card-visual ph">
+          <span class="card-tag">Coming soon</span>
+        </div>
+        <div class="card-body">
+          <div class="card-kicker">Project two</div>
+          <h3>Your next case study</h3>
+          <p>A slot ready for your next project — the layout, redaction pattern, and styling are already set up, so adding one is mostly writing.</p>
+          <div class="meta-row">
+            <span class="ph-note">Placeholder — replace with real work</span>
+            <span class="placeholder-flag">Draft</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">About</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>I'm a senior UX researcher with nine years at Microsoft, most of it spent inside enterprise and security products where the users are experts, the workflows are complex, and a confusing interface has real operational cost.</p>
+        <p>My strength is <strong>reframing the question</strong>. Teams often come to research asking "does this design work?" — and the more valuable answer is usually "here's what your customers are actually trying to do, and whether this is even the right thing to build." I work across generative and evaluative methods: design reviews, in-depth interviews, concept testing, diary studies, and survey work, and I translate what I hear into direction product and design teams can move on.</p>
+        <p>I care a lot about <strong>rigor and honesty</strong> in research — separating what customers say from what they need, presenting evidence without overclaiming, and making sure a study changes a decision rather than just decorating one.</p>
+        <p>I'm currently open to senior and lead UX research roles. If you're building something complex for demanding users, that's exactly where I do my best work.</p>
+      </div>
+      <div class="about-side">
+        <div class="block">
+          <h4>Methods</h4>
+          <ul>
+            <li>Design & concept reviews</li>
+            <li>In-depth interviews</li>
+            <li>Usability evaluation</li>
+            <li>Survey design & analysis</li>
+            <li>Diary & longitudinal studies</li>
+            <li>Jobs-to-be-Done framing</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Domains</h4>
+          <ul>
+            <li>Enterprise & IT admin tools</li>
+            <li>Security & device management</li>
+            <li>Data-dense dashboards</li>
+            <li>Design systems at scale</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let's talk about <em>what your customers really need.</em></h2>
+    <p>Open to senior and lead UX research roles, and to conversations about hard research problems in complex products.</p>
+    <a class="contact-mail" href="mailto:holly@foo.com">holly@foo.com</a>
+    <div class="contact-links">
+      <a href="#" title="Update this link">LinkedIn</a>
+      <a href="#" title="Update this link">Resume (PDF)</a>
+      <a href="mailto:holly@foo.com">Email</a>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>© 2026 Holly Ambler. Case studies presented with confidential and participant information redacted.</span>
+  <span>Designed &amp; written by Holly Ambler</span>
+</footer>
+
+</body>
+</html>
