@@ -10,14 +10,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#fbfaf8;
-    --bg-soft:#f3f0ea;
-    --ink:#1c1b19;
-    --ink-soft:#4a4742;
-    --muted:#77716a;
-    --line:#e5e0d7;
-    --accent:#9c4a35;
-    --accent-soft:#c98a6f;
+    color-scheme:dark;
+    --bg:#121820;
+    --bg-soft:#161d26;
+    --surface:#1b2431;
+    --surface-2:#202b3a;
+    --ink:#e1e8ed;
+    --ink-soft:#aeb9c2;
+    --muted:#7b8894;
+    --line:rgba(225,232,237,.11);
+    --teal:#00d2c4;
+    --teal-dim:#0aa89e;
+    --pink:#ff6584;
+    --pink-dim:#e04e6d;
     --max:1120px;
     --case-max:820px;
     --serif:'Fraunces', Georgia, 'Times New Roman', serif;
@@ -40,28 +45,26 @@
   /* Nav */
   header.site{
     position:sticky;top:0;z-index:50;
-    background:rgba(251,250,248,.82);
+    background:rgba(18,24,32,.82);
     backdrop-filter:saturate(140%) blur(10px);
     border-bottom:1px solid var(--line);
   }
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:.2px}
-  .brand span{color:var(--accent)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
   .nav ul{display:flex;gap:30px;list-style:none;font-size:14px;letter-spacing:.3px}
   .nav ul a{color:var(--ink-soft);transition:color .2s}
-  .nav ul a:hover{color:var(--accent)}
-  .nav-cta{border:1px solid var(--ink);padding:9px 18px;border-radius:100px;font-size:14px;transition:all .2s}
-  .nav-cta:hover{background:var(--ink);color:var(--bg)}
+  .nav ul a:hover{color:var(--teal)}
+  .nav-cta{background:var(--pink);color:#121820;padding:10px 20px;border-radius:100px;font-size:14px;font-weight:600;transition:all .2s}
+  .nav-cta:hover{background:#ff7d97;box-shadow:0 8px 22px -10px rgba(255,101,132,.7)}
   @media(max-width:720px){.nav ul{display:none}}
 
   /* Hero */
-  .hero{padding:96px 0 72px}
+  .hero{padding:96px 0 74px}
   .hero h1{
     font-family:var(--serif);font-weight:500;
     font-size:clamp(44px,7vw,76px);line-height:1.02;letter-spacing:-.6px;
   }
   .hero .title{
-    font-family:var(--serif);font-style:italic;color:var(--accent);
+    font-family:var(--serif);font-style:italic;color:var(--teal);
     font-size:clamp(21px,3vw,28px);font-weight:400;margin-top:8px;
   }
   .hero .lede{margin-top:34px;max-width:60ch;font-size:20px;color:var(--ink-soft)}
@@ -71,48 +74,49 @@
     font-size:15px;align-items:center;
   }
   .hero-contact .hc-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
-  .hero-contact a{color:var(--accent);border-bottom:1px solid transparent;transition:border-color .2s}
-  .hero-contact a:hover{border-color:var(--accent)}
+  .hero-contact a{color:var(--teal);border-bottom:1px solid transparent;transition:border-color .2s}
+  .hero-contact a:hover{border-color:var(--teal)}
 
   /* Section shells */
   section{padding:72px 0}
   .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:38px}
-  .sec-num{font-family:var(--serif);color:var(--accent-soft);font-size:15px;font-weight:600}
+  .sec-num{font-family:var(--serif);color:var(--teal);font-size:15px;font-weight:600}
   .sec-title{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.6vw,36px);letter-spacing:-.3px}
 
   /* Skills / tools */
   .expertise{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .expertise-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
   @media(max-width:760px){.expertise-grid{grid-template-columns:1fr;gap:38px}}
-  .expertise-grid h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:600}
+  .expertise-grid h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:18px;font-weight:600}
   .chips{display:flex;flex-wrap:wrap;gap:9px}
   .chip{
-    background:#fff;border:1px solid var(--line);border-radius:100px;
-    padding:7px 15px;font-size:14px;color:var(--ink-soft);
+    background:var(--surface);border:1px solid var(--line);border-radius:100px;
+    padding:7px 15px;font-size:14px;color:var(--ink-soft);transition:border-color .2s,color .2s;
   }
+  .chip:hover{border-color:var(--teal);color:var(--ink)}
 
   /* Projects list */
   .projects{display:flex;flex-direction:column;gap:22px}
   .p-card{
-    display:flex;gap:0;align-items:stretch;
-    background:#fff;border:1px solid var(--line);border-radius:14px;
+    display:flex;align-items:stretch;
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;
     overflow:hidden;cursor:pointer;
     transition:transform .25s,box-shadow .25s,border-color .25s;
   }
-  .p-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(28,27,25,.35);border-color:var(--accent-soft)}
+  .p-card:hover{transform:translateY(-3px);box-shadow:0 22px 44px -26px rgba(0,0,0,.8);border-color:var(--teal)}
   .p-visual{
     flex:none;width:210px;position:relative;overflow:hidden;
-    background:linear-gradient(135deg,#2b3a3a 0%,#3f5a58 55%,#9c4a35 150%);
+    background:linear-gradient(135deg,#132630 0%,#0b8f86 58%,#ff6584 165%);
   }
   .p-visual .mockrows{position:absolute;inset:24px 24px auto 24px;display:grid;gap:9px}
-  .mockrows .bar{height:11px;border-radius:4px;background:rgba(255,255,255,.16)}
-  .mockrows .bar.chart{height:42px;background:rgba(255,255,255,.10);display:flex;align-items:flex-end;gap:5px;padding:6px}
-  .mockrows .bar.chart i{flex:1;background:rgba(255,255,255,.42);border-radius:2px}
+  .mockrows .bar{height:11px;border-radius:4px;background:rgba(255,255,255,.20)}
+  .mockrows .bar.chart{height:42px;background:rgba(255,255,255,.12);display:flex;align-items:flex-end;gap:5px;padding:6px}
+  .mockrows .bar.chart i{flex:1;background:rgba(255,255,255,.5);border-radius:2px}
   .p-body{padding:26px 28px;flex:1;display:flex;flex-direction:column;min-width:0}
   .p-card h3{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.2;margin-bottom:12px}
   .p-card p{font-size:15px;color:var(--ink-soft);margin-bottom:18px}
   .p-meta{margin-top:auto;display:flex;align-items:center;justify-content:flex-end;font-size:13px}
-  .p-card .go{color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  .p-card .go{color:var(--teal);font-weight:600;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
   @media(max-width:680px){
     .p-card{flex-direction:column}
     .p-visual{width:100%;height:120px}
@@ -123,48 +127,54 @@
   .case-study:nth-of-type(even){background:var(--bg-soft)}
   .case-lead{max-width:var(--case-max);margin:0 auto;padding:0 28px}
   .case-back{font-size:14px;color:var(--ink-soft);display:inline-flex;gap:7px;align-items:center;margin-bottom:26px}
-  .case-back:hover{color:var(--accent)}
-  .case-eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+  .case-back:hover{color:var(--teal)}
+  .case-eyebrow{
+    display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--pink);font-weight:600;margin-bottom:20px;
+    background:rgba(255,101,132,.12);border:1px solid rgba(255,101,132,.3);
+    padding:5px 12px;border-radius:100px;
+  }
   .case-study h2.case-title{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.4px;max-width:22ch;text-wrap:balance}
 
   article.case-body{max-width:var(--case-max);margin:0 auto;padding:44px 28px 0;font-size:18px;line-height:1.7}
   .field{margin:34px 0}
   .field:first-child{margin-top:0}
-  .field .label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+  .field .label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:8px}
   article.case-body p{color:var(--ink-soft)}
   article.case-body p strong{color:var(--ink);font-weight:600}
   article.case-body ul{margin:4px 0 0;padding-left:22px;color:var(--ink-soft)}
   article.case-body li{margin:10px 0}
   article.case-body li strong{color:var(--ink);font-weight:600}
 
-  .insights{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 28px}
-  .case-study:nth-of-type(even) .insights{background:var(--bg)}
+  .insights{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px 28px}
   .insights .label{margin-bottom:14px}
 
-  .impact-box{background:var(--ink);color:#f2eee7;border-radius:14px;padding:28px 32px}
-  .impact-box .label{color:var(--accent-soft)}
-  .impact-box p{color:#d7d1c7;margin:0}
+  .impact-box{
+    background:var(--surface-2);border:1px solid var(--line);border-left:3px solid var(--teal);
+    border-radius:12px;padding:26px 30px;box-shadow:0 0 40px -22px rgba(0,210,196,.55);
+  }
+  .impact-box .label{color:var(--teal)}
+  .impact-box p{color:#ffffff;margin:0}
+  .impact-box p strong{color:#ffffff}
 
   .meta-field{font-size:15px;color:var(--ink-soft)}
   .meta-field .mf-label{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
 
-  .flag{background:rgba(156,74,53,.10);border:1px dashed var(--accent-soft);color:var(--accent);border-radius:8px;padding:10px 14px;font-size:13px;margin-top:8px}
-
   /* Contact */
-  .contact{background:var(--ink);color:#f3efe8;text-align:center}
-  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.6vw,48px);letter-spacing:-.4px;margin:0 auto 30px}
+  .contact{background:#0d1319;text-align:center;border-top:1px solid var(--line)}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.6vw,48px);letter-spacing:-.4px;margin:0 auto 30px;color:var(--ink)}
   .contact-mail{
-    display:inline-block;font-family:var(--serif);font-size:clamp(20px,3vw,26px);color:#fff;
-    border-bottom:2px solid var(--accent);padding-bottom:4px;transition:color .2s
+    display:inline-block;font-family:var(--serif);font-size:clamp(20px,3vw,26px);color:var(--ink);
+    border-bottom:2px solid var(--pink);padding-bottom:4px;transition:color .2s
   }
-  .contact-mail:hover{color:var(--accent-soft)}
+  .contact-mail:hover{color:var(--teal)}
   .contact-links{margin-top:30px;display:flex;gap:26px;justify-content:center;font-size:14px;flex-wrap:wrap}
-  .contact-links a{color:#bcb5ab;border-bottom:1px solid transparent;padding-bottom:2px;transition:.2s}
-  .contact-links a:hover{color:#fff;border-color:var(--accent)}
+  .contact-links a{color:var(--ink-soft);border-bottom:1px solid transparent;padding-bottom:2px;transition:.2s}
+  .contact-links a:hover{color:var(--teal);border-color:var(--teal)}
 
   footer{padding:34px 0;font-size:13px;color:var(--muted);text-align:center}
 
-  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:3px}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.p-card:hover{transform:none}}
 </style>
 </head>
@@ -172,7 +182,6 @@
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="#top">Holly Ambler<span>.</span></a>
     <nav>
       <ul>
         <li><a href="#work">Work</a></li>
@@ -277,8 +286,8 @@
           </div>
         </div>
         <div class="p-body">
-          <h3>Cross-Product Journey Investigation, 2026</h3>
-          <p>Identify top cross-product workflows, capture task handoff mechanisms, document pain points, and identify areas of opportunity.</p>
+          <h3>Intune + Purview Cross-Product Study, 2026</h3>
+          <p>Following a reorg, investigated how IT Pros and Compliance admins do and do not interact and use each other's portals.</p>
           <div class="p-meta"><span class="go">Read case study →</span></div>
         </div>
       </a>
@@ -293,7 +302,7 @@
         </div>
         <div class="p-body">
           <h3>Platform Pivot Survey, 2026</h3>
-          <p>Discover when and why Intune users drop out of the task funnel; complement my PM partner's parallel telemetry investigation; validate previous qualitative research about user pivots.</p>
+          <p>Uncovered why Intune users abandon a task to jump into other Security portals, backing up telemetry findings and validating prior research.</p>
           <div class="p-meta"><span class="go">Read case study →</span></div>
         </div>
       </a>
@@ -308,7 +317,7 @@
         </div>
         <div class="p-body">
           <h3>Copilot Entry Point Study, 2025</h3>
-          <p>Discover which entry point users select first and why; understand how their use cases and roles influenced that choice; assess how to optimize UI discoverability without straying into cognitive overload and information architecture polyhierarchy.</p>
+          <p>Tested two design systems to see which one IT Pros reach for first, and how role and billing shape Copilot adoption.</p>
           <div class="p-meta"><span class="go">Read case study →</span></div>
         </div>
       </a>
@@ -323,7 +332,7 @@
         </div>
         <div class="p-body">
           <h3>Agentic Workflows in Intune, 2024</h3>
-          <p>Learn what Intune admins expect from agentic experiences, including specifics about configuration, deployment, and monitoring workflows, permissions, audit requirements, and trust.</p>
+          <p>Learned how much control Intune admins are willing cede to AI agents, and what guardrails, permissions, and verification affordances they need to trust the system.</p>
           <div class="p-meta"><span class="go">Read case study →</span></div>
         </div>
       </a>
@@ -338,7 +347,7 @@
         </div>
         <div class="p-body">
           <h3>Intune Devices Workload JTBD Study, 2024</h3>
-          <p>Capture Intune users' top task, job steps, pain points, and opportunities using the JTBD framework (Functional jobs, social jobs, emotional jobs, related jobs, job performers, success criteria). Create a job map and quick reference guide to inform my stakeholders and enable self-service.</p>
+          <p>Ran a JTBD study on the portal's busiest surface, then built a job map and quick reference so partners could self-serve.</p>
           <div class="p-meta"><span class="go">Read case study →</span></div>
         </div>
       </a>
@@ -382,7 +391,7 @@
     </div>
     <div class="field">
       <div class="label">My role</div>
-      <p>Research lead: The Partner Product Design Director reached out to me to uncover all I could, as fast as I could, about customer journeys that spanned both Intune and Purview. I drafted and drove the research plan, tapped my research counterpart on the Purview team to partner with me, created and administered the project workspace, led the literature review, recruited participants, ran JTBD research, and created a rapid qualitative share-out of my findings using Copilot. In parallel, I worked with PM partners to pull telemetry data and with Support partners to capture ticket volume and themes. My research partner and I collaborated on a survey. We also collaborated on the final report, which I delivered to key stakeholders.</p>
+      <p><strong>Research lead:</strong> The Partner Product Design Director reached out to me to uncover all I could, as fast as I could, about customer journeys that spanned both Intune and Purview. I drafted and drove the research plan, tapped my research counterpart on the Purview team to partner with me, created and administered the project workspace, led the literature review, recruited participants, ran JTBD research, and created a rapid qualitative share-out of my findings using Copilot. In parallel, I worked with PM partners to pull telemetry data and with Support partners to capture ticket volume and themes. My research partner and I collaborated on a survey. We also collaborated on the final report, which I delivered to key stakeholders.</p>
     </div>
     <div class="field">
       <p class="meta-field"><span class="mf-label">What this shows</span>Project leadership, research rigor, AI adoption, stakeholder management, bias for action, storytelling skills.</p>
@@ -427,7 +436,7 @@
     </div>
     <div class="field">
       <div class="label">My role</div>
-      <p>Research lead: I ran a survey to uncover the scenarios where users leave Intune and their reasons for doing so and correlated those findings with their roles, company size, and license tier. I then worked with my PM partner to compare the survey findings to his telemetry data, which focused on which page they were on when they left and how often that pivot occurred. I crafted an easily digested report and delivered it to Executive Leadership.</p>
+      <p><strong>Research lead:</strong> I ran a survey to uncover the scenarios where users leave Intune and their reasons for doing so and correlated those findings with their roles, company size, and license tier. I then worked with my PM partner to compare the survey findings to his telemetry data, which focused on which page they were on when they left and how often that pivot occurred. I crafted an easily digested report and delivered it to Executive Leadership.</p>
     </div>
     <div class="field">
       <p class="meta-field"><span class="mf-label">What this shows</span>Project leadership, research rigor, AI adoption, stakeholder management, bias for action, flexibility, storytelling skills.</p>
@@ -475,7 +484,7 @@
     </div>
     <div class="field">
       <div class="label">My role</div>
-      <p>Research lead: Crafted the research and test plan. Organized and led the data wallow. Crafted the report, using plain language and actionable recommendations. Shared findings in major forums. Study was cited by other researchers.</p>
+      <p><strong>Research lead:</strong> Crafted the research and test plan. Organized and led the data wallow. Crafted the report, using plain language and actionable recommendations. Shared findings in major forums. Study was cited by other researchers.</p>
     </div>
     <div class="field">
       <p class="meta-field"><span class="mf-label">What this shows</span>Research rigor, understanding of "questions behind the questions," thought leadership, business mindset.</p>
@@ -523,8 +532,7 @@
     </div>
     <div class="field">
       <div class="label">My role</div>
-      <p>Research lead:</p>
-      <div class="flag">⚠ Heads-up (not published as-is concern — your text ends here): your source reads "My role: Research lead:" with nothing after the colon. Let me know what you'd like to add.</div>
+      <p><strong>Research lead:</strong> Assessed project needs, created research plan, wrote script, led interviews, analyzed findings, wrote, presented, and socialized report of findings.</p>
     </div>
     <div class="field">
       <p class="meta-field"><span class="mf-label">What this shows</span>Research rigor, understanding of "questions behind the questions," thought leadership.</p>
@@ -553,8 +561,7 @@
     </div>
     <div class="field">
       <div class="label">Approach</div>
-      <p>Survey to capture jobs and segment them by job performer; 14 interviews with FTEs, Solution Architects, and</p>
-      <div class="flag">⚠ Heads-up: this sentence ends on "and" — it looks cut off in your source. Tell me how it should finish.</div>
+      <p>Survey to capture jobs and segment them by job performer; 14 interviews with FTEs, Solution Architects, and Support staff.</p>
     </div>
     <div class="field insights">
       <div class="label">Key Insights</div>
@@ -570,7 +577,7 @@
     </div>
     <div class="field">
       <div class="label">My role</div>
-      <p>Research lead: Identified need, proactively initiated project to meet it.</p>
+      <p><strong>Research lead:</strong> Identified need, proactively initiated project to meet it.</p>
     </div>
     <div class="field">
       <p class="meta-field"><span class="mf-label">What this shows</span>Research rigor, business mindset.</p>
