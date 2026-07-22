@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Holly Ambler — Senior UX Researcher</title>
-<meta name="description" content="Holly Ambler is a senior UX researcher using mixed methods and Jobs-to-be-Done to help teams understand their customers and build the right thing, at the right time, in the right way.">
+<meta name="description" content="Holly Ambler, Senior UX Researcher. Mixed-methods research concentrating on deep qualitative insights and Jobs-to-be-done.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,10 +18,8 @@
     --line:#e5e0d7;
     --accent:#9c4a35;
     --accent-soft:#c98a6f;
-    --good:#3f6d54;
     --max:1120px;
     --case-max:820px;
-    --wide:1080px;
     --serif:'Fraunces', Georgia, 'Times New Roman', serif;
     --sans:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   }
@@ -57,33 +55,30 @@
   @media(max-width:720px){.nav ul{display:none}}
 
   /* Hero */
-  .hero{padding:88px 0 64px}
-  .eyebrow{
-    font-size:13px;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--accent);font-weight:600;margin-bottom:26px;
-  }
+  .hero{padding:96px 0 72px}
   .hero h1{
     font-family:var(--serif);font-weight:500;
-    font-size:clamp(38px,6.2vw,68px);line-height:1.06;
-    letter-spacing:-.5px;max-width:18ch;text-wrap:balance;
+    font-size:clamp(44px,7vw,76px);line-height:1.02;letter-spacing:-.6px;
   }
-  .hero h1 em{font-style:italic;color:var(--accent)}
-  .hero .lede{
-    margin-top:28px;max-width:60ch;font-size:20px;color:var(--ink-soft);
+  .hero .title{
+    font-family:var(--serif);font-style:italic;color:var(--accent);
+    font-size:clamp(21px,3vw,28px);font-weight:400;margin-top:8px;
   }
-  .hero .lede + .lede{margin-top:16px;font-size:18px}
-  .hero-meta{
-    margin-top:40px;display:flex;flex-wrap:wrap;gap:12px 28px;
-    font-size:14px;color:var(--muted);
+  .hero .lede{margin-top:34px;max-width:60ch;font-size:20px;color:var(--ink-soft)}
+  .hero .lede + .lede{margin-top:16px}
+  .hero-contact{
+    margin-top:38px;display:flex;flex-wrap:wrap;gap:10px 26px;
+    font-size:15px;align-items:center;
   }
-  .hero-meta b{color:var(--ink);font-weight:600}
+  .hero-contact .hc-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .hero-contact a{color:var(--accent);border-bottom:1px solid transparent;transition:border-color .2s}
+  .hero-contact a:hover{border-color:var(--accent)}
 
   /* Section shells */
   section{padding:72px 0}
-  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:40px}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:38px}
   .sec-num{font-family:var(--serif);color:var(--accent-soft);font-size:15px;font-weight:600}
   .sec-title{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.6vw,36px);letter-spacing:-.3px}
-  .sec-sub{color:var(--muted);font-size:15px;margin:-28px 0 40px}
 
   /* Skills / tools */
   .expertise{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -95,12 +90,11 @@
     background:#fff;border:1px solid var(--line);border-radius:100px;
     padding:7px 15px;font-size:14px;color:var(--ink-soft);
   }
-  .expertise-col + .expertise-col h4{margin-top:0}
 
   /* Projects list */
   .projects{display:flex;flex-direction:column;gap:22px}
   .p-card{
-    display:flex;gap:26px;align-items:stretch;
+    display:flex;gap:0;align-items:stretch;
     background:#fff;border:1px solid var(--line);border-radius:14px;
     overflow:hidden;cursor:pointer;
     transition:transform .25s,box-shadow .25s,border-color .25s;
@@ -114,16 +108,14 @@
   .mockrows .bar{height:11px;border-radius:4px;background:rgba(255,255,255,.16)}
   .mockrows .bar.chart{height:42px;background:rgba(255,255,255,.10);display:flex;align-items:flex-end;gap:5px;padding:6px}
   .mockrows .bar.chart i{flex:1;background:rgba(255,255,255,.42);border-radius:2px}
-  .p-body{padding:26px 28px 26px 0;flex:1;display:flex;flex-direction:column;min-width:0}
-  .p-kicker{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px}
-  .p-card h3{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.2;margin-bottom:10px}
+  .p-body{padding:26px 28px;flex:1;display:flex;flex-direction:column;min-width:0}
+  .p-card h3{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.2;margin-bottom:12px}
   .p-card p{font-size:15px;color:var(--ink-soft);margin-bottom:18px}
-  .p-meta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+  .p-meta{margin-top:auto;display:flex;align-items:center;justify-content:flex-end;font-size:13px}
   .p-card .go{color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
   @media(max-width:680px){
-    .p-card{flex-direction:column;gap:0}
+    .p-card{flex-direction:column}
     .p-visual{width:100%;height:120px}
-    .p-body{padding:24px 26px}
   }
 
   /* Case studies */
@@ -133,48 +125,34 @@
   .case-back{font-size:14px;color:var(--ink-soft);display:inline-flex;gap:7px;align-items:center;margin-bottom:26px}
   .case-back:hover{color:var(--accent)}
   .case-eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
-  .case-study h2.case-title{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.4px;max-width:20ch;text-wrap:balance}
-  .case-study .case-sub{margin-top:22px;max-width:64ch;font-size:19px;color:var(--ink-soft)}
+  .case-study h2.case-title{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.4px;max-width:22ch;text-wrap:balance}
 
-  .factbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:44px 0 0}
-  .factbar-inner{max-width:var(--case-max);margin:0 auto;padding:24px 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .fact h4{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:8px}
-  .fact p{font-size:15px;color:var(--ink);line-height:1.45}
-  @media(max-width:720px){.factbar-inner{grid-template-columns:1fr 1fr;gap:22px}}
-
-  article.case-body{max-width:var(--case-max);margin:0 auto;padding:48px 28px 0;font-size:18px;line-height:1.7}
-  article.case-body .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:44px 0 6px}
-  article.case-body h3{font-family:var(--serif);font-weight:500;font-size:clamp(21px,2.6vw,26px);letter-spacing:-.2px;margin:0 0 14px;line-height:1.2}
-  article.case-body p{margin:14px 0;color:var(--ink-soft)}
+  article.case-body{max-width:var(--case-max);margin:0 auto;padding:44px 28px 0;font-size:18px;line-height:1.7}
+  .field{margin:34px 0}
+  .field:first-child{margin-top:0}
+  .field .label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+  article.case-body p{color:var(--ink-soft)}
   article.case-body p strong{color:var(--ink);font-weight:600}
-  article.case-body ul{margin:16px 0 16px 2px;padding-left:22px;color:var(--ink-soft)}
-  article.case-body li{margin:9px 0}
+  article.case-body ul{margin:4px 0 0;padding-left:22px;color:var(--ink-soft)}
+  article.case-body li{margin:10px 0}
   article.case-body li strong{color:var(--ink);font-weight:600}
 
-  .pull{font-family:var(--serif);font-weight:500;font-size:clamp(21px,3vw,28px);line-height:1.3;color:var(--ink);letter-spacing:-.2px;margin:40px 0;padding-left:26px;border-left:3px solid var(--accent);text-wrap:balance}
-
-  .insights{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 30px;margin:26px 0}
+  .insights{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 28px}
   .case-study:nth-of-type(even) .insights{background:var(--bg)}
-  .insights .ins-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px}
-  .insights ul{margin:0;padding-left:22px}
-  .insights li{margin:11px 0;color:var(--ink-soft)}
+  .insights .label{margin-bottom:14px}
 
-  .impact{background:var(--ink);color:#f2eee7;border-radius:16px;padding:34px 36px;margin:36px 0}
-  .impact .imp-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-soft);font-weight:600;margin-bottom:10px}
-  .impact p{color:#d7d1c7;margin:0}
+  .impact-box{background:var(--ink);color:#f2eee7;border-radius:14px;padding:28px 32px}
+  .impact-box .label{color:var(--accent-soft)}
+  .impact-box p{color:#d7d1c7;margin:0}
 
-  .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
-  .tag{background:rgba(156,74,53,.09);color:var(--accent);border:1px solid var(--accent-soft);border-radius:100px;padding:5px 13px;font-size:13px;font-weight:500}
-  .case-study:nth-of-type(even) .tag{background:rgba(156,74,53,.10)}
+  .meta-field{font-size:15px;color:var(--ink-soft)}
+  .meta-field .mf-label{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
 
-  .role-line{font-size:15px;color:var(--muted);margin-top:22px}
-  .role-line strong{color:var(--ink);font-weight:600}
+  .flag{background:rgba(156,74,53,.10);border:1px dashed var(--accent-soft);color:var(--accent);border-radius:8px;padding:10px 14px;font-size:13px;margin-top:8px}
 
   /* Contact */
   .contact{background:var(--ink);color:#f3efe8;text-align:center}
-  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.6vw,48px);letter-spacing:-.4px;max-width:20ch;margin:0 auto 22px;text-wrap:balance}
-  .contact h2 em{font-style:italic;color:var(--accent-soft)}
-  .contact p{color:#bcb5ab;max-width:52ch;margin:0 auto 34px}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.6vw,48px);letter-spacing:-.4px;margin:0 auto 30px}
   .contact-mail{
     display:inline-block;font-family:var(--serif);font-size:clamp(20px,3vw,26px);color:#fff;
     border-bottom:2px solid var(--accent);padding-bottom:4px;transition:color .2s
@@ -184,7 +162,7 @@
   .contact-links a{color:#bcb5ab;border-bottom:1px solid transparent;padding-bottom:2px;transition:.2s}
   .contact-links a:hover{color:#fff;border-color:var(--accent)}
 
-  footer{padding:34px 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer{padding:34px 0;font-size:13px;color:var(--muted);text-align:center}
 
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.p-card:hover{transform:none}}
@@ -209,14 +187,15 @@
 <a id="top"></a>
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Senior UX Researcher</div>
-    <h1>Helping teams understand their customers so they build <em>the right thing.</em></h1>
-    <p class="lede">At the right time, in the right way — for teams of every size. I run mixed-methods research concentrating on deep qualitative insight and Jobs-to-be-Done.</p>
-    <p class="lede">I support projects end to end: from foundational wants-and-needs research, to design validation, to continuous performance measurement and improvement.</p>
-    <div class="hero-meta">
-      <span><b>Mixed methods</b> — qual & quant</span>
-      <span><b>Jobs-to-be-Done</b> specialist</span>
-      <span><b>Focus</b> — IT Pros at large enterprises</span>
+    <h1>Holly Ambler</h1>
+    <p class="title">Senior UX Researcher</p>
+    <p class="lede">Helping teams of every size understand their customers so they can build the right thing, at the right time, in the right way.</p>
+    <p class="lede">Mixed-methods research concentrating on deep qualitative insights and Jobs-to-be-done.</p>
+    <p class="lede">End-to-end project support, from foundational wants and needs research to design validation to continuous performance measurement and improvement.</p>
+    <div class="hero-contact">
+      <span class="hc-label">Get in touch</span>
+      <a href="mailto:ilex.ambler@gmail.com">ilex.ambler@gmail.com</a>
+      <a href="https://www.linkedin.com/in/holly-ambler-ux" target="_blank" rel="noopener">linkedin.com/in/holly-ambler-ux</a>
     </div>
   </div>
 </section>
@@ -225,11 +204,11 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-num">01</span>
-      <h2 class="sec-title">Skills &amp; expertise</h2>
+      <h2 class="sec-title">Skills &amp; Expertise</h2>
     </div>
     <div class="expertise-grid">
-      <div class="expertise-col">
-        <h4>Skills &amp; expertise</h4>
+      <div>
+        <h4>Skills &amp; Expertise</h4>
         <div class="chips">
           <span class="chip">Project Leadership</span>
           <span class="chip">Study Design</span>
@@ -243,40 +222,38 @@
           <span class="chip">Deep understanding of IT Pros at large enterprises</span>
         </div>
       </div>
-      <div class="expertise-col">
-        <h4>Tools &amp; methods</h4>
+      <div>
+        <h4>Tools &amp; Methods</h4>
         <div class="chips">
-          <span class="chip">Jobs-to-be-Done (JTBD)</span>
-          <span class="chip">Interviews</span>
-          <span class="chip">Contextual Inquiry</span>
-          <span class="chip">Surveys</span>
-          <span class="chip">Top Tasks Analysis</span>
-          <span class="chip">Journey Mapping</span>
-          <span class="chip">Usability Testing</span>
-          <span class="chip">Unmoderated Studies</span>
-          <span class="chip">Concept Testing</span>
-          <span class="chip">Tree Testing</span>
-          <span class="chip">Card Sorts</span>
-          <span class="chip">Cloze Testing</span>
-          <span class="chip">Heuristic Evaluation</span>
-          <span class="chip">Cognitive Walkthroughs</span>
-          <span class="chip">Usability Benchmarks</span>
-          <span class="chip">Single Ease Question (SEQ)</span>
-          <span class="chip">A/B Testing</span>
-          <span class="chip">Diary Studies</span>
-          <span class="chip">Focus Groups</span>
-          <span class="chip">Wireframing</span>
           <span class="chip">Marvin</span>
           <span class="chip">FigJam</span>
-          <span class="chip">Figma</span>
           <span class="chip">Lovable</span>
           <span class="chip">Claude</span>
-          <span class="chip">Copilot (chat &amp; CLI)</span>
+          <span class="chip">Copilot Frontier models, accessed through both chat and the CLI</span>
           <span class="chip">Respondent.io</span>
           <span class="chip">UserTesting.com</span>
           <span class="chip">Microsoft Loop</span>
           <span class="chip">Microsoft SharePoint</span>
-          <span class="chip">Microsoft Forms</span>
+          <span class="chip">Tree Testing</span>
+          <span class="chip">Card Sorts</span>
+          <span class="chip">Cloze Testing</span>
+          <span class="chip">Usability Testing</span>
+          <span class="chip">Wireframing</span>
+          <span class="chip">Heuristic Evaluation</span>
+          <span class="chip">Usability Benchmarks</span>
+          <span class="chip">Surveys</span>
+          <span class="chip">Single Ease Question (SEQ)</span>
+          <span class="chip">Top Tasks Analysis</span>
+          <span class="chip">Journey Mapping</span>
+          <span class="chip">Jobs-to-be-Done (JTBD)</span>
+          <span class="chip">Contextual Inquiry</span>
+          <span class="chip">Interviews</span>
+          <span class="chip">A/B Testing</span>
+          <span class="chip">Unmoderated Studies</span>
+          <span class="chip">Concept Testing</span>
+          <span class="chip">Cognitive Walkthroughs</span>
+          <span class="chip">Diary Studies</span>
+          <span class="chip">Focus Groups</span>
         </div>
       </div>
     </div>
@@ -287,9 +264,8 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-num">02</span>
-      <h2 class="sec-title">Featured projects</h2>
+      <h2 class="sec-title">Featured Projects</h2>
     </div>
-    <p class="sec-sub">Five recent research projects from Microsoft Intune. Confidential and participant details redacted for public presentation.</p>
     <div class="projects">
 
       <a class="p-card" href="#case-cross-product">
@@ -301,13 +277,9 @@
           </div>
         </div>
         <div class="p-body">
-          <div class="p-kicker">Intune × Purview · 2026</div>
-          <h3>Cross-Product Journey Investigation</h3>
-          <p>After a reorg brought Intune and Purview under one team, I mapped whether — and how — two different kinds of admin actually work across both products.</p>
-          <div class="p-meta">
-            <span>JTBD · Survey · Telemetry · Top Tasks</span>
-            <span class="go">Read case study →</span>
-          </div>
+          <h3>Cross-Product Journey Investigation, 2026</h3>
+          <p>Identify top cross-product workflows, capture task handoff mechanisms, document pain points, and identify areas of opportunity.</p>
+          <div class="p-meta"><span class="go">Read case study →</span></div>
         </div>
       </a>
 
@@ -320,13 +292,9 @@
           </div>
         </div>
         <div class="p-body">
-          <div class="p-kicker">Microsoft Intune · 2026</div>
-          <h3>Platform Pivot Survey</h3>
-          <p>Why do Intune users leave mid-task for other Security portals? A survey paired with telemetry showed the journey is a round trip driven by feature gaps.</p>
-          <div class="p-meta">
-            <span>Survey · Stakeholder interviews</span>
-            <span class="go">Read case study →</span>
-          </div>
+          <h3>Platform Pivot Survey, 2026</h3>
+          <p>Discover when and why Intune users drop out of the task funnel; complement my PM partner's parallel telemetry investigation; validate previous qualitative research about user pivots.</p>
+          <div class="p-meta"><span class="go">Read case study →</span></div>
         </div>
       </a>
 
@@ -339,13 +307,9 @@
           </div>
         </div>
         <div class="p-body">
-          <div class="p-kicker">Microsoft Copilot · 2025</div>
-          <h3>Copilot Entry Point Study</h3>
-          <p>A within-participant usability study comparing two design systems for IT Pros — and surfacing how license allocation quietly constrains AI adoption.</p>
-          <div class="p-meta">
-            <span>Usability study · 11 participants · Figma</span>
-            <span class="go">Read case study →</span>
-          </div>
+          <h3>Copilot Entry Point Study, 2025</h3>
+          <p>Discover which entry point users select first and why; understand how their use cases and roles influenced that choice; assess how to optimize UI discoverability without straying into cognitive overload and information architecture polyhierarchy.</p>
+          <div class="p-meta"><span class="go">Read case study →</span></div>
         </div>
       </a>
 
@@ -358,13 +322,9 @@
           </div>
         </div>
         <div class="p-body">
-          <div class="p-kicker">Microsoft Intune · 2024</div>
-          <h3>Agentic Workflows in Intune</h3>
-          <p>How much control will admins cede to AI agents when Intune is the control plane and uptime is non-negotiable? 19 interviews on trust, risk, and guardrails.</p>
-          <div class="p-meta">
-            <span>Generative · 19 interviews · Cluster analysis</span>
-            <span class="go">Read case study →</span>
-          </div>
+          <h3>Agentic Workflows in Intune, 2024</h3>
+          <p>Learn what Intune admins expect from agentic experiences, including specifics about configuration, deployment, and monitoring workflows, permissions, audit requirements, and trust.</p>
+          <div class="p-meta"><span class="go">Read case study →</span></div>
         </div>
       </a>
 
@@ -377,13 +337,9 @@
           </div>
         </div>
         <div class="p-body">
-          <div class="p-kicker">Microsoft Intune · 2024</div>
-          <h3>Intune Devices Workload JTBD Study</h3>
-          <p>A proactive, large-scale JTBD study of the portal's most-visited surface — turned into a job map and quick-reference guide my stakeholders could self-serve.</p>
-          <div class="p-meta">
-            <span>Survey (N=57) · JTBD interviews · Job mapping</span>
-            <span class="go">Read case study →</span>
-          </div>
+          <h3>Intune Devices Workload JTBD Study, 2024</h3>
+          <p>Capture Intune users' top task, job steps, pain points, and opportunities using the JTBD framework (Functional jobs, social jobs, emotional jobs, related jobs, job performers, success criteria). Create a job map and quick reference guide to inform my stakeholders and enable self-service.</p>
+          <div class="p-meta"><span class="go">Read case study →</span></div>
         </div>
       </a>
 
@@ -395,55 +351,44 @@
 <section id="case-cross-product" class="case-study">
   <div class="case-lead">
     <a class="case-back" href="#work">← All work</a>
-    <div class="case-eyebrow">Case Study · Intune × Purview · 2026</div>
+    <div class="case-eyebrow">Case Study · 2026</div>
     <h2 class="case-title">Cross-Product Journey Investigation</h2>
-    <p class="case-sub">When a reorg put Microsoft's enterprise endpoint-management and data-governance products under one team, leadership needed to know where — and whether — their two very different admins actually meet.</p>
   </div>
-
-  <div class="factbar">
-    <div class="factbar-inner">
-      <div class="fact"><h4>My role</h4><p>Research lead — drove plan, partnered across research, PM &amp; Support</p></div>
-      <div class="fact"><h4>Methods</h4><p>AI-assisted lit review, telemetry, support tickets, JTBD, survey</p></div>
-      <div class="fact"><h4>Delivered to</h4><p>CVP of the new Management &amp; Data Security org</p></div>
-    </div>
-  </div>
-
   <article class="case-body">
-    <div class="kicker">Context</div>
-    <h3>Two products, two admins, one new org</h3>
-    <p>Our division was reorganized, bringing <strong>Intune</strong> (Microsoft's enterprise endpoint-management solution) and <strong>Purview</strong> (its data governance and compliance solution) under a single team. The CVP of the new Management and Data Security org needed to know about any cross-product moments between the two products — and how the two different types of admin who use them might or might not interact, both within and outside the Microsoft admin portals.</p>
-
-    <div class="kicker">Goal</div>
-    <p>Identify top cross-product workflows, capture task handoff mechanisms, document pain points, and identify areas of opportunity.</p>
-
-    <div class="kicker">Approach</div>
-    <h3>Move fast, triangulate hard</h3>
-    <p>AI-assisted literature review; cross-portal telemetry data analysis; a Support ticket deep dive; rapid JTBD research with Intune and Purview admins to validate workflows and job steps; and a survey to capture top tasks, major pain points, and opportunities to improve at scale. Recommendations were delivered through an easily interpreted <strong>"Frequency vs. Pain" matrix</strong>, with a "Read this if you only have 2 minutes" slide communicating the major findings.</p>
-
-    <div class="insights">
-      <div class="ins-label">Key insights</div>
+    <div class="field">
+      <div class="label">Context</div>
+      <p>Our division was reorganized, bringing Intune, Microsoft's enterprise endpoint management solution, and Purview, its data governance and compliance solution, under the auspices of a single team. The CVP of the new Management and Data Security org needed to know about any cross-product moments between the two products and how the two different types of admins who use them might or might not interact, both within and outside of the Microsoft admin portals.</p>
+    </div>
+    <div class="field">
+      <div class="label">Goal</div>
+      <p>Identify top cross-product workflows, capture task handoff mechanisms, document pain points, and identify areas of opportunity.</p>
+    </div>
+    <div class="field">
+      <div class="label">Approach</div>
+      <p>AI-assisted literature review; cross-portal telemetry data analysis; Support ticket deep dive, rapid JTBD research with Intune and Purview admins to validate workflows and job steps; survey to capture top tasks, major pain points, and opportunities to improve at scale. Recommendations delivered through an easily interpreted "Frequency vs. Pain" matrix, with a "Read this if you only have 2 minutes" slide communicating major findings.</p>
+    </div>
+    <div class="field insights">
+      <div class="label">Key Insights</div>
       <ul>
-        <li>Cross-product journeys are <strong>rare</strong>.</li>
-        <li>At enterprises, the two admin types — IT Pros for Intune, Compliance and Data Security professionals for Purview — seldom access their counterparts' portals, in accordance with the principle of Least Privilege.</li>
-        <li>Security professionals define the posture; IT Pros figure out how to implement it. Communication and task management happen <strong>outside</strong> Microsoft tooling.</li>
-        <li>Silent configurations and ambiguity about permissions are the top pain point for both segments. Cross-product notifications and clearer guidance about who owns protecting corporate data on BYOD devices are the top opportunities.</li>
+        <li>Cross-product journeys are rare.</li>
+        <li>At enterprises, the two types of admins (IT Pros for Intune, Compliance and Data Security professionals for Purview) seldom access their counterparts' portals in accordance with principles of Least Privilege.</li>
+        <li>Security professionals define the posture, and IT Pros figure out how to implement it. Communication and task management occur outside of Microsoft tooling.</li>
+        <li>Silent configurations and ambiguity about permissions are the top pain point for both segments. Cross-product notifications to combat silent configurations and clearer guidance about which team should own protecting corporate data on BYOD devices are the top opportunities.</li>
       </ul>
     </div>
-
-    <div class="impact">
-      <div class="imp-label">Impact</div>
-      <p>This research laid the foundation for ongoing Secure Enterprise Browser improvements and the next phase of Intune–Purview interoperability.</p>
+    <div class="field impact-box">
+      <div class="label">Impact</div>
+      <p>This research laid the foundation for ongoing Secure Enterprise Browser improvements and the next phase of Intune-Purview interoperability.</p>
     </div>
-
-    <p class="role-line"><strong>My role.</strong> The Partner Product Design Director asked me to uncover all I could, as fast as I could, about journeys spanning both products. I drafted and drove the research plan, tapped my Purview research counterpart to partner with me, stood up the project workspace, led the literature review, recruited participants, ran JTBD research, and built a rapid qualitative share-out using Copilot. In parallel I worked with PM partners to pull telemetry and with Support partners to capture ticket volume and themes. My research partner and I collaborated on the survey and the final report, which I delivered to key stakeholders.</p>
-
-    <div class="tags">
-      <span class="tag">Project leadership</span>
-      <span class="tag">Research rigor</span>
-      <span class="tag">AI adoption</span>
-      <span class="tag">Stakeholder management</span>
-      <span class="tag">Bias for action</span>
-      <span class="tag">Storytelling</span>
+    <div class="field">
+      <div class="label">My role</div>
+      <p>Research lead: The Partner Product Design Director reached out to me to uncover all I could, as fast as I could, about customer journeys that spanned both Intune and Purview. I drafted and drove the research plan, tapped my research counterpart on the Purview team to partner with me, created and administered the project workspace, led the literature review, recruited participants, ran JTBD research, and created a rapid qualitative share-out of my findings using Copilot. In parallel, I worked with PM partners to pull telemetry data and with Support partners to capture ticket volume and themes. My research partner and I collaborated on a survey. We also collaborated on the final report, which I delivered to key stakeholders.</p>
+    </div>
+    <div class="field">
+      <p class="meta-field"><span class="mf-label">What this shows</span>Project leadership, research rigor, AI adoption, stakeholder management, bias for action, storytelling skills.</p>
+    </div>
+    <div class="field">
+      <p class="meta-field"><span class="mf-label">Methods and Tools</span>JTBD, Survey, Top Tasks Analysis. Copilot Cowork for lit review, analysis and first-draft report generation, Microsoft Loop to coordinate the team and rapidly socialize "Research Nuggets."</p>
     </div>
   </article>
 </section>
@@ -452,54 +397,43 @@
 <section id="case-platform-pivot" class="case-study">
   <div class="case-lead">
     <a class="case-back" href="#work">← All work</a>
-    <div class="case-eyebrow">Case Study · Microsoft Intune · 2026</div>
+    <div class="case-eyebrow">Case Study · 2026</div>
     <h2 class="case-title">Platform Pivot Survey</h2>
-    <p class="case-sub">A new principal PM noticed Intune users sometimes pivot to other Security suite portals mid-task. I was asked to discover why — and found the journey was a round trip, not an exit.</p>
   </div>
-
-  <div class="factbar">
-    <div class="factbar-inner">
-      <div class="fact"><h4>My role</h4><p>Research lead — survey design, analysis, exec delivery</p></div>
-      <div class="fact"><h4>Methods</h4><p>Lit review, stakeholder interviews, survey</p></div>
-      <div class="fact"><h4>Delivered to</h4><p>Executive leadership</p></div>
-    </div>
-  </div>
-
   <article class="case-body">
-    <div class="kicker">Context</div>
-    <h3>Why do users leave mid-task?</h3>
-    <p>A new principal PM noticed that Intune users sometimes pivot to the other Security suite portals mid-task. The Partner Product Design Director asked me to discover why.</p>
-
-    <div class="kicker">Goal</div>
-    <p>Discover when and why Intune users drop out of the task funnel; complement my PM partner's parallel telemetry investigation; and validate previous qualitative research about user pivots.</p>
-
-    <div class="kicker">Approach</div>
-    <h3>Pair the survey with telemetry</h3>
-    <p>A lit review of previous research; stakeholder interviews to understand the problem space and hypotheses; and a survey recruited through the <strong>Intune Customer Connection Panel</strong>, a Microsoft-maintained user community.</p>
-
-    <div class="insights">
-      <div class="ins-label">Key insights</div>
+    <div class="field">
+      <div class="label">Context</div>
+      <p>A new principal PM noticed that Intune users sometimes pivot to the other Security suite portals mid-task. The Partner Product Design Director asked me to discover why.</p>
+    </div>
+    <div class="field">
+      <div class="label">Goal</div>
+      <p>Discover when and why Intune users drop out of the task funnel; complement my PM partner's parallel telemetry investigation; validate previous qualitative research about user pivots.</p>
+    </div>
+    <div class="field">
+      <div class="label">Approach</div>
+      <p>Lit review of previous research; stakeholder interviews to understand problem space and hypotheses; survey recruited through the Intune Customer Connection Panel, which is a Microsoft-maintained user community.</p>
+    </div>
+    <div class="field insights">
+      <div class="label">Key Insights</div>
       <ul>
-        <li>Pivoting occurs only in a <strong>narrow set of scenarios</strong>, and is driven by feature gaps.</li>
-        <li>The journey is a <strong>round trip</strong>: users don't abandon Intune — they gather what they need from other portals, then return to complete their original task.</li>
-        <li>Journey depth can be shortened by bringing Licensing information and Edge configuration capabilities into Intune.</li>
+        <li>Pivoting occurs only in a narrow set of scenarios and is driven by feature gaps.</li>
+        <li>The journey is round trip: Users do not abandon Intune but instead gather necessary information from the other portals, then return to complete their original task.</li>
+        <li>We can shorten journey depth by bringing Licensing information and Edge configuration capabilities into Intune.</li>
       </ul>
     </div>
-
-    <div class="impact">
-      <div class="imp-label">Impact</div>
-      <p>Saved rework cycles, captured user motivations, and uncovered concrete product opportunities.</p>
+    <div class="field impact-box">
+      <div class="label">Impact</div>
+      <p>Saved rework cycles, captured user motivations, uncovered product opportunities.</p>
     </div>
-
-    <p class="role-line"><strong>My role.</strong> I ran a survey to uncover the scenarios where users leave Intune and their reasons for doing so, then correlated those findings with role, company size, and license tier. I worked with my PM partner to compare the survey results against his telemetry — which page users were on when they left, and how often each pivot occurred — and crafted an easily digested report I delivered to executive leadership.</p>
-
-    <div class="tags">
-      <span class="tag">Project leadership</span>
-      <span class="tag">Research rigor</span>
-      <span class="tag">AI adoption</span>
-      <span class="tag">Stakeholder management</span>
-      <span class="tag">Flexibility</span>
-      <span class="tag">Storytelling</span>
+    <div class="field">
+      <div class="label">My role</div>
+      <p>Research lead: I ran a survey to uncover the scenarios where users leave Intune and their reasons for doing so and correlated those findings with their roles, company size, and license tier. I then worked with my PM partner to compare the survey findings to his telemetry data, which focused on which page they were on when they left and how often that pivot occurred. I crafted an easily digested report and delivered it to Executive Leadership.</p>
+    </div>
+    <div class="field">
+      <p class="meta-field"><span class="mf-label">What this shows</span>Project leadership, research rigor, AI adoption, stakeholder management, bias for action, flexibility, storytelling skills.</p>
+    </div>
+    <div class="field">
+      <p class="meta-field"><span class="mf-label">Methods and Tools</span>Survey, Microsoft Forms, Copilot Cowork for analysis and report acceleration.</p>
     </div>
   </article>
 </section>
@@ -508,55 +442,46 @@
 <section id="case-copilot-entry" class="case-study">
   <div class="case-lead">
     <a class="case-back" href="#work">← All work</a>
-    <div class="case-eyebrow">Case Study · Microsoft Copilot · 2025</div>
+    <div class="case-eyebrow">Case Study · 2025</div>
     <h2 class="case-title">Copilot Entry Point Study</h2>
-    <p class="case-sub">A head-to-head usability study of two competing design systems — which entry point serves IT Pros best, and why — that also surfaced how licensing quietly shapes AI adoption.</p>
   </div>
-
-  <div class="factbar">
-    <div class="factbar-inner">
-      <div class="fact"><h4>My role</h4><p>Research lead — plan, data wallow, reporting</p></div>
-      <div class="fact"><h4>Methods</h4><p>Within-participant usability study · high-fidelity Figma prototype</p></div>
-      <div class="fact"><h4>Participants</h4><p>11, with alternating task order to counter primacy bias</p></div>
-    </div>
-  </div>
-
   <article class="case-body">
-    <div class="kicker">Context</div>
-    <h3>Two design systems, one IT Pro</h3>
-    <p>This usability study compared two competing design systems to assess which one served IT Pros best, and why. The interview component further explored sentiment around billing, and whether and how a user's role affected Copilot adoption and usage.</p>
-
-    <div class="kicker">Goal</div>
-    <p>Discover which entry point users select first and why; understand how their use cases and roles influenced that choice; and assess how to optimize UI discoverability without straying into cognitive overload or information-architecture polyhierarchy.</p>
-
-    <div class="kicker">Approach</div>
-    <h3>Within-participant, counterbalanced</h3>
-    <p>A within-participant usability study with 11 participants, a high-fidelity prototype, and alternating task order to counteract primacy bias.</p>
-
-    <div class="insights">
-      <div class="ins-label">Key insights</div>
+    <div class="field">
+      <div class="label">Context</div>
+      <p>This usability study compared two competing design systems to assess which one served IT Pros best, and why. The interview component of the study further explored sentiment around billing, and if and how user role affected Copilot adoption and usage.</p>
+    </div>
+    <div class="field">
+      <div class="label">Goal</div>
+      <p>Discover which entry point users select first and why; understand how their use cases and roles influenced that choice; assess how to optimize UI discoverability without straying into cognitive overload and information architecture polyhierarchy.</p>
+    </div>
+    <div class="field">
+      <div class="label">Approach</div>
+      <p>Within-participant usability study. 11 participants. High-fidelity prototype. Alternating task order to counteract primacy bias.</p>
+    </div>
+    <div class="field insights">
+      <div class="label">Key Insights</div>
       <ul>
         <li>Multiple entry points confuse users, increase frustration, and slow task completion.</li>
-        <li>Users expect Copilot entry points to be <strong>contextually aware</strong> of their task, role, and usage patterns.</li>
-        <li>They expect a minimum number of turns to complete a task — so provide suggested prompts to minimize "garbage in / garbage out" and ineffective prompting.</li>
-        <li>Large enterprises typically use a chargeback model, making consumption hard to track. When users lack visibility into consumption, they limit their Copilot usage.</li>
-        <li>When prompts are limited, they're typically allocated to SecOps rather than IT Pros — constraining AI adoption for Intune teams at large enterprises.</li>
-        <li>Copilot was seen as more valuable for junior admins than for experienced admins or Solutions Architects.</li>
+        <li>Users expect Copilot entry points to be contextually aware of their task, role, and usage patterns.</li>
+        <li>Relatedly, they expect a minimum number of turns to complete their tasks. To support this goal, provide suggested prompts to minimize "garbage in/garbage out" and ineffective prompting.</li>
+        <li>Large enterprises typically employ a chargeback model, making consumption harder to track. When they lack visibility about consumption, users limit Copilot usage.</li>
+        <li>If prompts are limited, they are typically allocated to SecOps instead of IT Pros. This factor constrained AI adoption for Intune teams at large enterprises.</li>
+        <li>Copilot was viewed as more valuable for junior admins than experienced admins or Solutions Architects.</li>
       </ul>
     </div>
-
-    <div class="impact">
-      <div class="imp-label">Impact</div>
-      <p>Directly influenced product and design direction, and contributed insights about license-allocation patterns that fed a shift in the licensing model.</p>
+    <div class="field impact-box">
+      <div class="label">Impact</div>
+      <p>Directly influenced the product and design direction and contributed important insights about license allocation patterns, which contributed to a shift in the licensing model.</p>
     </div>
-
-    <p class="role-line"><strong>My role.</strong> I crafted the research and test plan, organized and led the data wallow, and wrote the report in plain language with actionable recommendations. I shared findings in major forums, and the study was cited by other researchers.</p>
-
-    <div class="tags">
-      <span class="tag">Research rigor</span>
-      <span class="tag">Questions behind the questions</span>
-      <span class="tag">Thought leadership</span>
-      <span class="tag">Business mindset</span>
+    <div class="field">
+      <div class="label">My role</div>
+      <p>Research lead: Crafted the research and test plan. Organized and led the data wallow. Crafted the report, using plain language and actionable recommendations. Shared findings in major forums. Study was cited by other researchers.</p>
+    </div>
+    <div class="field">
+      <p class="meta-field"><span class="mf-label">What this shows</span>Research rigor, understanding of "questions behind the questions," thought leadership, business mindset.</p>
+    </div>
+    <div class="field">
+      <p class="meta-field"><span class="mf-label">Methods and Tools</span>Usability study, Figma.</p>
     </div>
   </article>
 </section>
@@ -565,54 +490,47 @@
 <section id="case-agentic" class="case-study">
   <div class="case-lead">
     <a class="case-back" href="#work">← All work</a>
-    <div class="case-eyebrow">Case Study · Microsoft Intune · 2024</div>
+    <div class="case-eyebrow">Case Study · 2024</div>
     <h2 class="case-title">Agentic Workflows in Intune</h2>
-    <p class="case-sub">Intune is the control plane for the IT production environment, and uptime is non-negotiable. So how much control would admins actually cede to AI agents — and what guardrails would adoption require?</p>
   </div>
-
-  <div class="factbar">
-    <div class="factbar-inner">
-      <div class="fact"><h4>My role</h4><p>Research lead — end to end</p></div>
-      <div class="fact"><h4>Methods</h4><p>Generative research · cluster analysis</p></div>
-      <div class="fact"><h4>Participants</h4><p>19 Intune admins &amp; Solutions Architects</p></div>
-    </div>
-  </div>
-
   <article class="case-body">
-    <div class="kicker">Context</div>
-    <h3>The next leap — with uptime on the line</h3>
-    <p>Agentic workflows represented the next leap forward for Intune's AI journey. The complicating factor: Intune is the control plane for the IT production environment, and uptime is non-negotiable. How much control would Intune admins be willing to cede to AI agents? What guardrails would need to be in place to support adoption? And what kind of agentic experiences would admins want, need — and be willing to pay for?</p>
-
-    <div class="kicker">Goal</div>
-    <p>Learn what Intune admins expect from agentic experiences — including specifics about configuration, deployment, and monitoring workflows; permissions; audit requirements; and trust.</p>
-
-    <div class="kicker">Approach</div>
-    <h3>Generative interviews, plus a structured rating</h3>
-    <p>19 interviews with Intune admins and Solutions Architects, including a rating exercise using the <strong>Cloud Security Alliance Autonomy Level Taxonomy</strong>.</p>
-
-    <div class="insights">
-      <div class="ins-label">Key insights</div>
+    <div class="field">
+      <div class="label">Context</div>
+      <p>Agentic workflows represented the next leap forward for Intune's AI journey. A complicating factor, however, is the fact that Intune is the control plane for the IT production environment, and uptime is non-negotiable. How much control would Intune Admins be willing to cede to AI agents? What guardrails would need to be in place to support adoption? What kind of agentic experiences would Intune Admins want and need (and be willing to pay for)?</p>
+    </div>
+    <div class="field">
+      <div class="label">Goal</div>
+      <p>Learn what Intune admins expect from agentic experiences, including specifics about configuration, deployment, and monitoring workflows, permissions, audit requirements, and trust.</p>
+    </div>
+    <div class="field">
+      <div class="label">Approach</div>
+      <p>Generative research: 19 interviews with Intune admins and Solutions Architects. Rating exercise using the Cloud Security Alliance Autonomy Level Taxonomy.</p>
+    </div>
+    <div class="field insights">
+      <div class="label">Key Insights</div>
       <ul>
-        <li><strong>Risk is the deciding factor.</strong> Agents can't perform any task with a wide "blast radius," or one that could result in data loss or device unavailability.</li>
-        <li>Admins can't adopt agentic workflows until they've been successfully piloted, as with any other technology rollout.</li>
-        <li>Agents can't inherit the permissions of their human "pilots." They must use service accounts or their own credentials to satisfy audit requirements and zero-trust principles.</li>
-        <li><strong>Humans retain control over scope.</strong> Agents must explicitly obtain permission from the human in the loop to access certain resources or take certain actions — and those permissions must be re-granted periodically.</li>
+        <li>Risk is the deciding factor: Agents cannot perform any tasks with a wide "blast radius" or those that could potentially result in data loss or data or device unavailability.</li>
+        <li>Admins cannot adopt agentic workflows until they've been successfully piloted, as in any other technology rollout.</li>
+        <li>Agents cannot use the permissions of human "pilots." They must instead use service accounts or their own credentials to comply with audit requirements and principles of zero trust.</li>
+        <li>Human must retain control over scope: Agents must explicitly obtain permission from the "human in the loop" to access certain resources or to perform certain actions, and those permissions must be re-granted periodically.</li>
         <li>In some cases, deterministic automations are more appropriate than agentic workflows.</li>
-        <li>Agents must abide by the same change-control, governance, and ITIL processes as human beings.</li>
+        <li>Agents must abide by the same change control, governance, and ITIL processes as human beings.</li>
       </ul>
     </div>
-
-    <div class="impact">
-      <div class="imp-label">Impact</div>
-      <p>Foundational research that helped set the direction for agentic experiences. The article was referenced by the entire design team and the Agents core PM group, and the work was cited by fellow researchers.</p>
+    <div class="field impact-box">
+      <div class="label">Impact</div>
+      <p>Foundational research that helped set the direction for agentic experiences. Article referenced by the entire design team and the Agents core PM group. Work cited by fellow researchers.</p>
     </div>
-
-    <p class="role-line"><strong>My role.</strong> Research lead, end to end.</p>
-
-    <div class="tags">
-      <span class="tag">Research rigor</span>
-      <span class="tag">Questions behind the questions</span>
-      <span class="tag">Thought leadership</span>
+    <div class="field">
+      <div class="label">My role</div>
+      <p>Research lead:</p>
+      <div class="flag">⚠ Heads-up (not published as-is concern — your text ends here): your source reads "My role: Research lead:" with nothing after the colon. Let me know what you'd like to add.</div>
+    </div>
+    <div class="field">
+      <p class="meta-field"><span class="mf-label">What this shows</span>Research rigor, understanding of "questions behind the questions," thought leadership.</p>
+    </div>
+    <div class="field">
+      <p class="meta-field"><span class="mf-label">Methods and Tools</span>1:1 Interviews at scale, cluster analysis</p>
     </div>
   </article>
 </section>
@@ -621,69 +539,61 @@
 <section id="case-devices-jtbd" class="case-study">
   <div class="case-lead">
     <a class="case-back" href="#work">← All work</a>
-    <div class="case-eyebrow">Case Study · Microsoft Intune · 2024</div>
+    <div class="case-eyebrow">Case Study · 2024</div>
     <h2 class="case-title">Intune Devices Workload JTBD Study</h2>
-    <p class="case-sub">My partners kept coming to me for answers about admins' top tasks in the portal's most-visited surface. So I ran a large-scale JTBD study once — and turned it into durable, self-serve reference.</p>
   </div>
-
-  <div class="factbar">
-    <div class="factbar-inner">
-      <div class="fact"><h4>My role</h4><p>Research lead — identified the need, ran it proactively</p></div>
-      <div class="fact"><h4>Methods</h4><p>Survey (N=57) · JTBD interviews · job mapping</p></div>
-      <div class="fact"><h4>Participants</h4><p>14 interviews — FTEs &amp; Solutions Architects</p></div>
-    </div>
-  </div>
-
   <article class="case-body">
-    <div class="kicker">Context</div>
-    <h3>Answer it once, share it forever</h3>
-    <p>My design and PM partners repeatedly came to me for answers about Intune admins' top tasks and workflows in the <strong>Devices workload</strong> — the most-visited surface in the portal. I proactively ran a large-scale JTBD study so I could share durable insights easily and quickly.</p>
-
-    <div class="kicker">Goal</div>
-    <p>Capture Intune users' top tasks, job steps, pain points, and opportunities using the JTBD framework — functional, social, emotional, and related jobs; job performers; and success criteria. Then create a job map and quick-reference guide to inform stakeholders and enable self-service.</p>
-
-    <div class="kicker">Approach</div>
-    <h3>Survey to segment, interviews to deepen</h3>
-    <p>A survey to capture jobs and segment them by job performer, plus 14 interviews with FTEs and Solutions Architects.</p>
-
-    <div class="insights">
-      <div class="ins-label">Key insights</div>
+    <div class="field">
+      <div class="label">Context</div>
+      <p>My design and PM partners repeatedly came to me for answers about Intune admins' top tasks and workflows in the Devices workload, the most-visited surface in the portal. I proactively ran a large-scale JTBD study to easily and quickly share durable insights.</p>
+    </div>
+    <div class="field">
+      <div class="label">Goal</div>
+      <p>Capture Intune users' top task, job steps, pain points, and opportunities using the JTBD framework (Functional jobs, social jobs, emotional jobs, related jobs, job performers, success criteria). Create a job map and quick reference guide to inform my stakeholders and enable self-service.</p>
+    </div>
+    <div class="field">
+      <div class="label">Approach</div>
+      <p>Survey to capture jobs and segment them by job performer; 14 interviews with FTEs, Solution Architects, and</p>
+      <div class="flag">⚠ Heads-up: this sentence ends on "and" — it looks cut off in your source. Tell me how it should finish.</div>
+    </div>
+    <div class="field insights">
+      <div class="label">Key Insights</div>
       <ul>
-        <li>Long lists, overlong journeys, duplicated entry points, non-human-readable errors and labels, ambiguous strings, and non-binary settings all impede task success and frustrate users.</li>
-        <li>Troubleshooting, monitoring, and reporting are <strong>phases in a cycle</strong> — and related jobs.</li>
-        <li>The job of configuring and deploying a policy <strong>starts and ends outside Microsoft tooling</strong>: users gather requirements, research documentation, translate stakeholder intent into Intune settings, and perform complex reporting in third-party tools like Power BI.</li>
+        <li>Long lists, overlong user journeys, duplicated entry points, non-human readable errors and labels, ambiguous strings, and non-binary settings impede task success and frustrate users.</li>
+        <li>Troubleshooting, monitoring, and reporting are phases in a cycle and related jobs.</li>
+        <li>The job of configuring and deploying a policy starts and ends outside of Microsoft tooling: Users must gather requirements, research documentation, translate stakeholder intent to Intune settings, and perform complex reporting tasks in third party tools like PowerBI.</li>
       </ul>
     </div>
-
-    <div class="impact">
-      <div class="imp-label">Impact</div>
-      <p>Foundational research that saved my stakeholders countless hours — and my most-referenced article in the Microsoft Research repository.</p>
+    <div class="field impact-box">
+      <div class="label">Impact</div>
+      <p>Foundational research that helped save my stakeholders countless hours. My most referenced article in the Microsoft Research repository.</p>
     </div>
-
-    <p class="role-line"><strong>My role.</strong> Research lead — I identified the need and proactively initiated the project to meet it.</p>
-
-    <div class="tags">
-      <span class="tag">Research rigor</span>
-      <span class="tag">Business mindset</span>
+    <div class="field">
+      <div class="label">My role</div>
+      <p>Research lead: Identified need, proactively initiated project to meet it.</p>
+    </div>
+    <div class="field">
+      <p class="meta-field"><span class="mf-label">What this shows</span>Research rigor, business mindset.</p>
+    </div>
+    <div class="field">
+      <p class="meta-field"><span class="mf-label">Methods and Tools</span>Survey (N=57), JTBD interviews, job mapping.</p>
     </div>
   </article>
 </section>
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <h2>Let's talk about <em>what your customers really need.</em></h2>
-    <p>Open to senior and lead UX research roles, and to conversations about hard research problems in complex products.</p>
+    <h2>Get in touch</h2>
     <a class="contact-mail" href="mailto:ilex.ambler@gmail.com">ilex.ambler@gmail.com</a>
     <div class="contact-links">
-      <a href="https://www.linkedin.com/in/holly-ambler-ux" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/holly-ambler-ux" target="_blank" rel="noopener">linkedin.com/in/holly-ambler-ux</a>
       <a href="mailto:ilex.ambler@gmail.com">Email</a>
     </div>
   </div>
 </section>
 
-<footer class="wrap">
-  <span>© 2026 Holly Ambler. Case studies presented with confidential and participant information redacted.</span>
-  <span>Designed &amp; written by Holly Ambler</span>
+<footer>
+  <span>© 2026 Holly Ambler · Confidential and participant details redacted for public presentation.</span>
 </footer>
 
 </body>
